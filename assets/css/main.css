@@ -3950,3 +3950,60 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
+/* Estilos para la sección del banner */
+#banner .inner {
+    position: relative; /* Establecemos un contexto de posicionamiento para los elementos absolutos dentro */
+    display: flex; /* Para controlar la disposición del texto y la imagen */
+    flex-direction: row; /* Texto a la izquierda, contenedor de imagen a la derecha */
+    justify-content: space-between; /* Espacio entre el texto y el contenedor de la imagen */
+    align-items: flex-start; /* Alineación vertical al inicio */
+}
+
+/* Estilos para el contenedor del texto */
+#banner .inner .banner-text {
+    flex-grow: 1; /* El texto ocupa el espacio restante */
+}
+
+/* Estilos para el contenedor de la imagen */
+#banner .inner .banner-image-container {
+    position: absolute;
+    top: -40px; /* Prueba con un valor negativo. Ajusta según necesites. */
+    right: 60px;
+    width: 200px;
+    height: 250px;
+    z-index: 1;
+}
+
+/* Estilos para la imagen de perfil con posicionamiento absoluto */
+#banner .inner .banner-image-container .profile-banner-image-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* La imagen ocupa todo el ancho de su contenedor */
+    height: 100%; /* La imagen ocupa toda la altura de su contenedor */
+    object-fit: cover; /* Recorta la imagen para mantener la forma si el contenedor no es proporcional */
+    border-radius: 50%; /* Efecto de círculo */
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    #banner .inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #banner .inner .banner-text {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    #banner .inner .banner-image-container {
+        position: relative; /* Volver a posicionamiento relativo en móviles */
+        top: auto;
+        right: auto;
+        margin-bottom: 1.5em;
+        width: 100px;
+        height: 100px;
+    }
+}
