@@ -4006,4 +4006,7 @@ input, select, textarea {
         width: 100px;
         height: 100px;
     }
+	#banner.style2 .inner .content {
+    text-align: center;
+	}
 }
