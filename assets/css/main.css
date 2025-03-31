@@ -2921,9 +2921,16 @@ input, select, textarea {
 
 /* Spotlights */
 
-	.spotlights {
-		border-top: 0 !important;
-	}
+		/* Elimina el margen superior predeterminado del contenedor de contenido */
+		.spotlights>section>.content {
+			margin-top: 0 !important;
+		}
+	
+		/* Ajusta el margen inferior del contenedor de la imagen */
+		.spotlights>section>a.image {
+			margin-bottom: 0.5em;
+			/* Prueba con diferentes valores, incluso 0 */
+		}
 
 		.spotlights + * {
 			border-top: 0 !important;
@@ -4009,4 +4016,11 @@ input, select, textarea {
 	#banner.style2 .inner .content {
     text-align: center;
 	}
+.project-item .image img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+
+
 }
